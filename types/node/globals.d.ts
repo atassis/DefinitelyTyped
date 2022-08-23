@@ -62,6 +62,9 @@ interface AbortSignal {
      * Returns true if this AbortSignal's AbortController has signaled to abort, and false otherwise.
      */
     readonly aborted: boolean;
+    /**
+     *
+     */
 }
 
 declare var AbortController: {
@@ -72,6 +75,7 @@ declare var AbortController: {
 declare var AbortSignal: {
     prototype: AbortSignal;
     new(): AbortSignal;
+    timeout(time: number): AbortSignal;
     // TODO: Add abort() static
 };
 //#endregion borrowed
